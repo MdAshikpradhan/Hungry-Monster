@@ -1,12 +1,10 @@
-
 const searchMeals = () => {
     const searchText = document.getElementById('search-field').value;
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
     fetch(url)
         .then(res => res.json())
         .then(data => displayMeals(data.meals))
-        .catch(error => displayError('Something wrong!! Please Try Again.'))
-        ;
+        .catch(error => displayError(error, 'Something wrong!! Please Try Again.'));
 }
 
 
@@ -25,7 +23,6 @@ const displayMeals = meals => {
         mealsContainer.appendChild(mealDiv);
     });
 }
-
 
 
 const displayMealsDetails = name => {
@@ -57,8 +54,6 @@ const ingredients = ingredients => {
         </div>
     `
 }
-
-
 
 const displayError = error => {
     const errorMessage = document.getElementById('errorMessage');
