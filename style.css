@@ -7,6 +7,12 @@
 body{
 
 }
+
+.icon{
+    font-size: 30px;
+    color: wheat;
+}
+
 header{
     margin-top: 30px;
 }
@@ -21,12 +27,18 @@ header{
 .searchButton{
     width: 80px;
     border-radius: 0 5px 5px 0;
-    background-color: #f6721a;
+    background-color: #F06C4E;
     height: 44px;
     border: none;
 }
 .searchArea{
     margin-top: 50px;
+}
+
+#errorMessage{
+    margin-top: 100px;
+    text-align: center;
+    color: rgb(238, 36, 0);
 }
 
 #mealContainer{
@@ -50,18 +62,18 @@ header{
 #mealIngredients {
     display: grid;
 }
-#mealIngredients div{
-    /* margin-left: -300px; */
-}
+
 #mealIngredients img{
     width: 500px;
     height: 300px;
     margin-top: 40px;
+    margin-bottom: 25px;
     border-radius: 10px;
 }
 #mealIngredients li{
     list-style: none;
 }
 #mealIngredients div> li > i{
- color: #f6721a;
+ color: #F06C4E;
 }
+

@@ -4,7 +4,9 @@ const searchMeals = () => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
     fetch(url)
         .then(res => res.json())
-        .then(data => displayMeals(data.meals));
+        .then(data => displayMeals(data.meals))
+        .catch(error => displayError('Something wrong!! Please Try Again.'))
+        ;
 }
 
 
@@ -42,7 +44,7 @@ const ingredients = ingredients => {
         </div>
         <div>
         <h3>${ingredients.strMeal}</h3>
-        <p>ingredients</p>
+        <h6>ingredients</h6>
         <li> <i class="fas fa-check-square"></i> ${ingredients.strIngredient1}</li>
         <li> <i class="fas fa-check-square"></i> ${ingredients.strIngredient2}</li>
         <li> <i class="fas fa-check-square"></i> ${ingredients.strIngredient3}</li>
@@ -55,3 +57,11 @@ const ingredients = ingredients => {
         </div>
     `
 }
+
+
+
+const displayError = error => {
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.innerText = error;
+}
+
