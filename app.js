@@ -4,7 +4,7 @@ const searchMeals = () => {
     fetch(url)
         .then(res => res.json())
         .then(data => displayMeals(data.meals))
-        .catch(error => displayError(error, 'Something wrong!! Please Try Again.'));
+        .catch(error => displayError('Something wrong!! Please Try Again.'));
 }
 
 
