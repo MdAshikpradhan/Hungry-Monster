@@ -52,7 +52,7 @@ header{
 }
 .mealDiv{
     width: 250px;
-    height: 320px;
+    height: 360px;
     background-color: #f1f1f1;
     margin-top: 60px;
     border-radius: 10px;
@@ -77,3 +77,46 @@ header{
  color: #F06C4E;
 }
 
+@media screen and (max-width: 600px) {
+    #mealContainer{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+    #mealIngredients img{
+        width: 100%;
+        height: 300px;
+        margin-top: 40px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+
+    .SearchBar{
+        width: 150px;
+        height: 30px;
+    }
+    .searchButton{
+        width: 80px;
+        height: 30px;
+    }
+  }
+
+@media screen and (max-width: 700px) {
+    #mealContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    #mealIngredients img{
+        width: 100%;
+    }
+
+    .SearchBar{
+        width: 250px;
+        height: 40px;
+    }
+    .searchButton{
+        height: 40px;
+    }
+  }
