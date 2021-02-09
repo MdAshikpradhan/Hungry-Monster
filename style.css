@@ -1,145 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600;1,700&display=swap');
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-:root{
-    --tenne-tawny: #d65108;
-    --tenne-tawny-dark: #b54507;
-}
-
 body{
-    font-weight: 300;
-    font-size: 1.05rem;
-    line-height: 1.5;
-    font-family: 'Crimson', sans-serif;
-}
-/* */
 
-.btn{
-    font-family: inherit;
-    cursor: pointer;
-    outline: -;
-    font-size: 1.05rem;
 }
-.text{
-    opacity: 0.8;
+header{
+    margin-top: 30px;
 }
-.title{
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-/**/
-.container{
-    min-height: 100vh;
-}
-.meal-wrapper{
- max-width: 1280px;
- margin: 0 auto;
- padding: 2rem;
- background-color: #fff;
- text-align: center;
-}
-.meal-search{
-    margin: 2rem 0;
-}
-
-.meal-search-box{
-    margin: 1.2rem 0;
-    display: flex;
-    align-items: stretch;
-}
-.search-control,
-.search-btn {
-    width: 100%;
-}
-.search-control{
-    padding: 0 1rem;
-    font-size: 1.1rem;
-    font-family: inherit;
-    outline: 0;
-    border: 1px solid var(--tenne-tawny);
-    color: var(--tenne-tawny);
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-}
-
-.search-control::placeholder{
-    color: var(--tenne-tawny);
-}
-
-.search-btn{
-    width: 55px;
-    height: 55px;
-    font-size: 1.8rem;
-    background: var(--tenne-tawny);
-    color: #fff;
+.SearchBar{
+    width: 300px;
+    height: 45px;
     border: none;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    transition: all 0.3s  linear;
+    padding-left: 20px;
+    border-radius:  5px 0 0 5px;
+    background-color: #f1f1f1;
 }
-.search-btn:hover{
-    background: var(--tenne-tawny-dark);
+.searchButton{
+    width: 80px;
+    border-radius: 0 5px 5px 0;
+    background-color: #f6721a;
+    height: 44px;
+    border: none;
 }
-
-.meal-result{
-    margin-top: 4rem;
-}
-#meal{
-    margin: 2.4rem;
-}
-.meal-item{
-    border-radius: 1rem ;
-    
-    overflow: hidden;
-    box-shadow: 0 4px 21px 12px rgba(0, 0, 0, 0.79);
-    margin: 2rem 0;
+.searchArea{
+    margin-top: 50px;
 }
 
-.meal-img{
+#mealContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.mealDiv img{
     width: 100%;
-    display: block;
+    border-radius: 10px;
 }
-.meal-name{
-    padding: 1.5rem 0.5rem;
-}
-.meal-name h3{
-    font-size: 1.4rem;
-}
-.recipe-btn{
-    text-decoration: none;
-    color: #fff;
-    background-color: var(--tenne-tawny-dark);
-    font-weight: 500;
-    font-size: 1.1rem;
-    padding: 0.75rem 0;
-    display: block;
-    width: 175px;
-    margin: 1rem auto;
-    border-radius: 2rem;
-    transition: all 0.4s linear;
-}
-.recipe-btn:hover{
-    background: var(--tenne-tawny-dark);
+.mealDiv{
+    width: 250px;
+    height: 320px;
+    background-color: #f1f1f1;
+    margin-top: 60px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-@media screen and (min-width: 600px){
-    .meal-search-box{
-        width: 540px;
-        margin-left: auto;
-        margin-right:auto;
-    }
+#mealIngredients {
+    display: grid;
 }
-
-@media screen and (min-width: 768px){
-    #meal{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 2rem;
-    }
+#mealIngredients div{
+    /* margin-left: -300px; */
+}
+#mealIngredients img{
+    width: 500px;
+    height: 300px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+#mealIngredients li{
+    list-style: none;
+}
+#mealIngredients div> li > i{
+ color: #f6721a;
 }

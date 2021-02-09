@@ -5,63 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <!-- Google fonts  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- Bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Hungry Monster</title>
     <!-- Custom Css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- In the name of Allah  -->
-    <div class="container">
-        <div class="meal-wrapper">
-            <div class="meal-search">
-                <div class="meal-search-box">
-                    <input type="text" class="search-control" placeholder="Enter an Ingredient" id="search-input">
-                    <button type="submit" class="search-btn btn" id="search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
+    <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Hungry MOnster</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Recipes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="meal-reasult">
-                <h2 class="title">Your search result</h2>
-                <div id="meal">
-                    <!-- meal Item -->
-                    <div class="main-item">
-                        <div class="meal-img">
-                            <img src="image/pastaveg_640x480.webp" alt="food">
-                        </div>
-                        <div class="meal-name">
-                            <h3>Potato Chips</h3>
-                            <a href="#" class="recipe-btn">Get Recipe</a>
-                        </div>
-                    </div>
-                    <!-- meal item end  -->
-                    <!-- meal Item -->
-                    <div class="main-item">
-                        <div class="meal-img">
-                            <img src="image/pastaveg_640x480.webp" alt="food">
-                        </div>
-                        <div class="meal-name">
-                            <h3>Potato Chips</h3>
-                            <a href="#" class="recipe-btn">Get Recipe</a>
-                        </div>
-                    </div>
-                    <!-- meal item end  -->
-                    <!-- meal Item -->
-                    <div class="main-item">
-                        <div class="meal-img">
-                            <img src="image/pastaveg_640x480.webp" alt="food">
-                        </div>
-                        <div class="meal-name">
-                            <h3>Potato Chips</h3>
-                            <a href="#" class="recipe-btn">Get Recipe</a>
-                        </div>
-                    </div>
-                    <!-- meal item end  -->
-                </div>
+          </nav>
+    </header>
+
+    <main class="container">
+        <div class="d-flex justify-content-center searchArea">
+            <div>
+                <input  id="search-field" type="text" placeholder="Search for meal" class="SearchBar "><button onclick="searchMeals()" class="searchButton">Search</button>
             </div>
         </div>
-    </div>
+        <div id="mealIngredients">
+
+        </div>
+        <div class="mealDetails">
+
+        </div>
+        <div id="mealContainer">
+
+        </div>
+    </main>
+<!-- Custom JavaScript  -->
+<script src="app.js"></script>
+<!-- bootstrap js link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
