@@ -7,6 +7,7 @@ const searchMeals = () => {
         .catch(error => displayError('Something wrong!! Please Try Again.'));
 }
 
+// Display Foods Items 
 
 const displayMeals = meals => {
     const mealsContainer = document.getElementById('mealContainer');
@@ -24,6 +25,7 @@ const displayMeals = meals => {
     });
 }
 
+// Meal Ingredients 
 
 const displayMealsDetails = name => {
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${name}`
@@ -52,11 +54,11 @@ const ingredients = ingredients => {
         <li> <i class="fas fa-check-square"></i> ${ingredients.strIngredient8}</li>
         <li> <i class="fas fa-check-square"></i> ${ingredients.strIngredient9}</li>
         </div>
-    `
-}
+    `}
+
+//Error Massage
 
 const displayError = error => {
     const errorMessage = document.getElementById('errorMessage');
     errorMessage.innerText = error;
 }
-
